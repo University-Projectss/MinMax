@@ -33,6 +33,16 @@ for(let i = 0; i < 9; i++) {
                 //verific daca a castigat 'O'
                 winnerO();
             }
+
+            let zeros = 0;
+            for(let j = 0; j < 3; j++)
+                for(let k = 0; k < 3; k++)
+                    if( mat[j][k] == 0 ) 
+                        zeros++;
+
+            if( zeros == 0 )
+                clearTable();
+
         }
 
         //console.log(mat);       
@@ -64,8 +74,14 @@ function winnerO() {
                 scoreo.innerHTML++;
                 whoMove.innerHTML = 'O';
                 lastMove = 'x';
+
+                for(let k = 0; k < 3; k++)
+                    cells[ 3 * j + k ].style.color = 'green';
+
                 setTimeout( () => {
                     clearTable();
+                    for(let k = 0; k < 3; k++)
+                        cells[ 3 * j + k ].style.color = 'black';
                 }, 1000 );
                 break;
             }
@@ -83,8 +99,14 @@ function winnerO() {
                 scoreo.innerHTML++;
                 whoMove.innerHTML = 'O';
                 lastMove = 'x';
+
+                for(let k = 0; k < 3; k++)
+                    cells[ 3 * k + j ].style.color = 'green';
+
                 setTimeout( () => {
                     clearTable();
+                    for(let k = 0; k < 3; k++)
+                        cells[ 3 * k + j ].style.color = 'black';
                 }, 1000 );
                 break;
             }
@@ -102,8 +124,14 @@ function winnerO() {
                 scoreo.innerHTML++;
                 whoMove.innerHTML = 'O';
                 lastMove = 'x';
+
+                for(let k = 0; k < 3; k++)
+                    cells[ 3 * k + k ].style.color = 'green';
+
                 setTimeout( () => {
                     clearTable();
+                    for(let k = 0; k < 3; k++)
+                        cells[ 3 * k + k ].style.color = 'black';
                 }, 1000 );
             }
         }
@@ -120,8 +148,14 @@ function winnerO() {
                 scoreo.innerHTML++;
                 whoMove.innerHTML = 'O';
                 lastMove = 'x';
+
+                for(let k = 0; k < 3; k++)
+                    cells[ 3 * k + 2 - k ].style.color = 'green';
+
                 setTimeout( () => {
                     clearTable();
+                    for(let k = 0; k < 3; k++)
+                        cells[ 3 * k + 2 - k ].style.color = 'black';
                 }, 1000 );
             }
         }
@@ -142,8 +176,14 @@ function winnerX() {
                 scorex.innerHTML++;
                 whoMove.innerHTML = 'X';
                 lastMove = 'o';
+
+                for(let k = 0; k < 3; k++)
+                    cells[ 3 * j + k ].style.color = 'green';
+                
                 setTimeout( () => {
                     clearTable();
+                    for(let k = 0; k < 3; k++)
+                        cells[ 3 * j + k ].style.color = 'black';
                 }, 1000 );
                 break;
             }
@@ -161,8 +201,14 @@ function winnerX() {
                 scorex.innerHTML++;
                 whoMove.innerHTML = 'X';
                 lastMove = 'o';
+
+                for(let k = 0; k < 3; k++)
+                    cells[ 3 * k + j ].style.color = 'green';
+
                 setTimeout( () => {
                     clearTable();
+                    for(let k = 0; k < 3; k++)
+                        cells[ 3 * k + j ].style.color = 'black';
                 }, 1000 );
                 break;
             }
@@ -180,8 +226,14 @@ function winnerX() {
                 scorex.innerHTML++;
                 whoMove.innerHTML = 'X';
                 lastMove = 'o';
+
+                for(let k = 0; k < 3; k++)
+                    cells[ 3 * k + k ].style.color = 'green';
+
                 setTimeout( () => {
                     clearTable();
+                    for(let k = 0; k < 3; k++)
+                        cells[ 3 * k + k ].style.color = 'black';
                 }, 1000 );
             }
         }
@@ -198,8 +250,14 @@ function winnerX() {
                 scorex.innerHTML++;
                 whoMove.innerHTML = 'X';
                 lastMove = 'o';
+
+                for(let k = 0; k < 3; k++)
+                    cells[ 3 * k + 2 - k ].style.color = 'green';
+
                 setTimeout( () => {
                     clearTable();
+                    for(let k = 0; k < 3; k++)
+                        cells[ 3 * k + 2 - k ].style.color = 'black';
                 }, 1000 );
             }
         }
