@@ -3,7 +3,7 @@ let mat = [];// = 1 pt 'X', = 2 pt 'O'
 let lastMove = 'o';
 let scorex = document.querySelector('.scorex');
 let scoreo = document.querySelector('.scoreo');
-let frX = 0, frO = 0;
+let whoMove = document.querySelector('.who-move');
 for(let i = 0; i < 3; i++)
     mat[i] = new Array(3);
 
@@ -20,7 +20,7 @@ for(let i = 0; i < 9; i++) {
                 cells[i].innerHTML = 'X';
                 mat[ Math.floor(i / 3) ][i % 3] = 1;
                 lastMove = 'x';
-                frX++;
+                whoMove.innerHTML = 'O';
 
                 //verific daca a castigat 'X'
                 winnerX();
@@ -28,7 +28,7 @@ for(let i = 0; i < 9; i++) {
                 cells[i].innerHTML = 'O';
                 mat[ Math.floor(i / 3) ][i % 3] = 2;
                 lastMove = 'o';
-                frO++;
+                whoMove.innerHTML = 'X';
 
                 //verific daca a castigat 'O'
                 winnerO();
@@ -39,8 +39,18 @@ for(let i = 0; i < 9; i++) {
     })
 }
 
+
+
+/********************************
+/////////////////////////////////
+AICI AM SCRIS FUNCTIILE 'HANDMADE'
+/////////////////////////////////
+********************************/
+
+
+
+
 function winnerO() {
-    if( frO >= 3 ) {
         let cnt;
         //pe linie
         for(let j = 0; j < 3; j++) {
@@ -52,15 +62,10 @@ function winnerO() {
             if( cnt == 3 ) {
                 console.log("O win");
                 scoreo.innerHTML++;
+                whoMove.innerHTML = 'O';
+                lastMove = 'x';
                 setTimeout( () => {
-                    for(let a = 0; a < 3; a++)
-                        for(let b = 0; b < 3; b++)
-                            mat[a][b] = 0;
-
-                    for(let a = 0; a < 9; a++)
-                        cells[a].innerHTML = "";
-
-                    
+                    clearTable();
                 }, 1000 );
                 break;
             }
@@ -76,15 +81,10 @@ function winnerO() {
             if( cnt == 3 ) {
                 console.log("O win");
                 scoreo.innerHTML++;
+                whoMove.innerHTML = 'O';
+                lastMove = 'x';
                 setTimeout( () => {
-                    for(let a = 0; a < 3; a++)
-                        for(let b = 0; b < 3; b++)
-                            mat[a][b] = 0;
-
-                    for(let a = 0; a < 9; a++)
-                        cells[a].innerHTML = "";
-
-                    
+                    clearTable();
                 }, 1000 );
                 break;
             }
@@ -100,15 +100,10 @@ function winnerO() {
             if( cnt == 3 ) {
                 console.log("O win");
                 scoreo.innerHTML++;
+                whoMove.innerHTML = 'O';
+                lastMove = 'x';
                 setTimeout( () => {
-                    for(let a = 0; a < 3; a++)
-                        for(let b = 0; b < 3; b++)
-                            mat[a][b] = 0;
-
-                    for(let a = 0; a < 9; a++)
-                        cells[a].innerHTML = "";
-
-                    
+                    clearTable();
                 }, 1000 );
             }
         }
@@ -123,25 +118,17 @@ function winnerO() {
             if( cnt == 3 ) {
                 console.log("O win");
                 scoreo.innerHTML++;
+                whoMove.innerHTML = 'O';
+                lastMove = 'x';
                 setTimeout( () => {
-                    for(let a = 0; a < 3; a++)
-                        for(let b = 0; b < 3; b++)
-                            mat[a][b] = 0;
-
-                    for(let a = 0; a < 9; a++)
-                        cells[a].innerHTML = "";
-
-                    
+                    clearTable();
                 }, 1000 );
             }
         }
 
-    }
-
 }
 
 function winnerX() {
-    if( frX >= 3 ) {
         let cnt;
         //pe linie
         for(let j = 0; j < 3; j++) {
@@ -153,15 +140,10 @@ function winnerX() {
             if( cnt == 3 ) {
                 console.log("X win");
                 scorex.innerHTML++;
+                whoMove.innerHTML = 'X';
+                lastMove = 'o';
                 setTimeout( () => {
-                    for(let a = 0; a < 3; a++)
-                        for(let b = 0; b < 3; b++)
-                            mat[a][b] = 0;
-
-                    for(let a = 0; a < 9; a++)
-                        cells[a].innerHTML = "";
-
-                    
+                    clearTable();
                 }, 1000 );
                 break;
             }
@@ -177,15 +159,10 @@ function winnerX() {
             if( cnt == 3 ) {
                 console.log("X win");
                 scorex.innerHTML++;
+                whoMove.innerHTML = 'X';
+                lastMove = 'o';
                 setTimeout( () => {
-                    for(let a = 0; a < 3; a++)
-                        for(let b = 0; b < 3; b++)
-                            mat[a][b] = 0;
-
-                    for(let a = 0; a < 9; a++)
-                        cells[a].innerHTML = "";
-
-                    
+                    clearTable();
                 }, 1000 );
                 break;
             }
@@ -201,15 +178,10 @@ function winnerX() {
             if( cnt == 3 ) {
                 console.log("X win");
                 scorex.innerHTML++;
+                whoMove.innerHTML = 'X';
+                lastMove = 'o';
                 setTimeout( () => {
-                    for(let a = 0; a < 3; a++)
-                        for(let b = 0; b < 3; b++)
-                            mat[a][b] = 0;
-
-                    for(let a = 0; a < 9; a++)
-                        cells[a].innerHTML = "";
-
-                    
+                    clearTable();
                 }, 1000 );
             }
         }
@@ -224,18 +196,20 @@ function winnerX() {
             if( cnt == 3 ) {
                 console.log("X win");
                 scorex.innerHTML++;
+                whoMove.innerHTML = 'X';
+                lastMove = 'o';
                 setTimeout( () => {
-                    for(let a = 0; a < 3; a++)
-                        for(let b = 0; b < 3; b++)
-                            mat[a][b] = 0;
-
-                    for(let a = 0; a < 9; a++)
-                        cells[a].innerHTML = "";
-
-                    
+                    clearTable();
                 }, 1000 );
             }
         }
+}
 
-    }
+function clearTable() {
+    for(let a = 0; a < 3; a++)
+      for(let b = 0; b < 3; b++)
+          mat[a][b] = 0;
+
+    for(let a = 0; a < 9; a++)
+         cells[a].innerHTML = "";
 }

@@ -49,5 +49,9 @@ body {
     align-items: center;
     justify-content: space-evenly;
     width: 300px;
+}
+
+p {
     margin-bottom: 5vh;
+    margin-top: 2vh;
 }
