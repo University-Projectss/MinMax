@@ -51,11 +51,8 @@ body {
     width: 300px;
 }
 
-.who-move {
-    display: none;
-}
-
 p {
+    display: none;
     margin-bottom: 5vh;
     margin-top: 2vh;
 }
