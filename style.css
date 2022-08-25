@@ -45,10 +45,14 @@ body {
 }
 
 .score-table {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-evenly;
     width: 300px;
+}
+
+.who-move {
+    display: none;
 }
 
 p {
