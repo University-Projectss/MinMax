@@ -119,7 +119,7 @@ function bestMove() {
     cells[move.i * 3 + move.j].innerHTML = 'O';
     mat[move.i ][move.j] = 2;
     lastMove = 'o';
-    whoMove.innerHTML = 'X';
+//     whoMove.innerHTML = 'X';
 
     //verific daca a castigat 'O'
     winnerO();
@@ -176,7 +176,7 @@ function winnerO() {
             if( cnt == 3 ) {
                 console.log("O win");
                 scoreo.innerHTML++;
-                whoMove.innerHTML = 'O';
+//                 whoMove.innerHTML = 'O';
                 lastMove = 'x';
 
                 for(let k = 0; k < 3; k++)
@@ -201,7 +201,7 @@ function winnerO() {
             if( cnt == 3 ) {
                 console.log("O win");
                 scoreo.innerHTML++;
-                whoMove.innerHTML = 'O';
+//                 whoMove.innerHTML = 'O';
                 lastMove = 'x';
 
                 for(let k = 0; k < 3; k++)
@@ -226,7 +226,7 @@ function winnerO() {
             if( cnt == 3 ) {
                 console.log("O win");
                 scoreo.innerHTML++;
-                whoMove.innerHTML = 'O';
+//                 whoMove.innerHTML = 'O';
                 lastMove = 'x';
 
                 for(let k = 0; k < 3; k++)
@@ -250,7 +250,7 @@ function winnerO() {
             if( cnt == 3 ) {
                 console.log("O win");
                 scoreo.innerHTML++;
-                whoMove.innerHTML = 'O';
+//                 whoMove.innerHTML = 'O';
                 lastMove = 'x';
 
                 for(let k = 0; k < 3; k++)
@@ -278,7 +278,7 @@ function winnerX() {
             if( cnt == 3 ) {
                 console.log("X win");
                 scorex.innerHTML++;
-                whoMove.innerHTML = 'X';
+//                 whoMove.innerHTML = 'X';
                 lastMove = 'o';
 
                 for(let k = 0; k < 3; k++)
@@ -303,7 +303,7 @@ function winnerX() {
             if( cnt == 3 ) {
                 console.log("X win");
                 scorex.innerHTML++;
-                whoMove.innerHTML = 'X';
+//                 whoMove.innerHTML = 'X';
                 lastMove = 'o';
 
                 for(let k = 0; k < 3; k++)
@@ -327,7 +327,7 @@ function winnerX() {
             if( cnt == 3 ) {
                 console.log("X win");
                 scorex.innerHTML++;
-                whoMove.innerHTML = 'X';
+//                 whoMove.innerHTML = 'X';
                 lastMove = 'o';
 
                 for(let k = 0; k < 3; k++)
@@ -351,7 +351,7 @@ function winnerX() {
             if( cnt == 3 ) {
                 console.log("X win");
                 scorex.innerHTML++;
-                whoMove.innerHTML = 'X';
+//                 whoMove.innerHTML = 'X';
                 lastMove = 'o';
 
                 for(let k = 0; k < 3; k++)
@@ -376,5 +376,5 @@ function clearTable() {
          cells[a].innerHTML = "";
     
          lastMove = 'o';
-         whoMove.innerHTML = 'X';
+//          whoMove.innerHTML = 'X';
 }
