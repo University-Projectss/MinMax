@@ -3,7 +3,7 @@ let mat = [];// = 1 pt 'X', = 2 pt 'O'
 let lastMove = 'o';
 let scorex = document.querySelector('.scorex');
 let scoreo = document.querySelector('.scoreo');
-let whoMove = document.querySelector('.who-move');
+// let whoMove = document.querySelector('.who-move');
 let fbMatrix, matrixObj;
 for(let i = 0; i < 3; i++)
     mat[i] = new Array(3);
@@ -29,7 +29,7 @@ for(let i = 0; i < 9; i++) {
             cells[i].innerHTML = 'X';
             mat[ Math.floor(i / 3) ][i % 3] = 1;
             lastMove = 'x';
-            whoMove.innerHTML = 'O';
+//             whoMove.innerHTML = 'O';
 
             //verific daca a castigat 'X'
             if( !winnerX() ) {
